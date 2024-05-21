@@ -1,0 +1,29 @@
+.form_inc{
+    margin-top: 40px;
+}
+
+.txt1 {
+    text-align: center;
+    margin-top: 70px; /* Adjust as needed */
+}
+
+.txt1 h2 {
+    font-size: 24px; /* Adjust as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+.txt1 h4 {
+    font-size: 18px; /* Adjust as needed */
+    color: #666; /* Adjust color as needed */
+}
+
+
+
+/* .login_bg {
+    background-image: url('../Assets/login1.jpg');
+    height: 92vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+} */
