@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-function BasicExample() {
+function EmpNavigation() {
 return (
 <Navbar bg="dark" data-bs-theme="dark">
     <Container>
@@ -42,4 +42,4 @@ return (
 );
 }
 
-export default BasicExample;
+export default EmpNavigation;

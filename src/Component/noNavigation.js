@@ -6,9 +6,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-function BasicExample() {
+function noNavigation() {
 return (
-<Navbar bg="dark" data-bs-theme="dark">
+<Navbar expand="lg" bg="dark" data-bs-theme="dark">
     <Container>
     <LinkContainer to='/'>
     <Navbar.Brand>Campus-Med</Navbar.Brand>
@@ -43,4 +43,4 @@ return (
 );
 }
 
-export default BasicExample;
+export default noNavigation;

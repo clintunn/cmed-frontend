@@ -17,7 +17,7 @@ return (
             </Form.Group>
         </Col>
         <Col md={1}>
-            <Button variant="primary" type="submit" style={{width: "100%", backgroundColor: "Black"}}>
+            <Button variant="primary" type="submit" style={{width: "100%", height: "100%", backgroundColor: "Black"}}>
                 <i className="fas fa-paper-plane"></i>
             </Button>
         </Col>
