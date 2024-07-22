@@ -22,9 +22,9 @@ return (
         <Nav.Link>Dashboard</Nav.Link>
         </LinkContainer>
         <LinkContainer to='/chat'>
-        <Nav.Link>Chat</Nav.Link>
+        <Nav.Link>Log out</Nav.Link>
         </LinkContainer>
-        <NavDropdown title="More" id="basic-nav-dropdown">
+        {/* <NavDropdown title="More" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">History</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
             Another action
@@ -34,7 +34,7 @@ return (
             <NavDropdown.Item href="#action/3.4">
             Log out
             </NavDropdown.Item>
-        </NavDropdown>
+        </NavDropdown> */}
         </Nav>
     </Navbar.Collapse>
     </Container>

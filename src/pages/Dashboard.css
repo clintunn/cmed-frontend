@@ -1,0 +1,154 @@
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    }
+    
+    .sidebar-col {
+    padding: 0;
+    }
+    
+    .sidebar {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    height: 100%;
+    }
+    
+    .sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+    .sidebar-nav li {
+    margin-bottom: 15px;
+    }
+    
+    .sidebar-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    }
+    
+    .sidebar-nav a svg {
+    margin-right: 10px;
+    }
+    
+    .main-content {
+    padding: 20px;
+    }
+    
+    .welcome-title {
+    margin-bottom: 30px;
+    color: #343a40;
+    }
+    
+    .dashboard-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    }
+    
+    .dashboard-card .card-title {
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    }
+    
+    .dashboard-card .card-title svg {
+    margin-right: 10px;
+    }
+    
+    .profile-card {
+    background-color: #e9ecef;
+    }
+    
+    .consultation-card {
+    background-color: #d1ecf1;
+    }
+    
+    .notifications-card {
+    background-color: #fff3cd;
+    }
+    
+    .appointments-card {
+    background-color: #d4edda;
+    }
+    
+    .profile-info p, .consultation-details p {
+    margin-bottom: 10px;
+    }
+    
+    .notification-alert {
+    margin-bottom: 10px;
+    }
+    
+    .appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    }
+    
+    .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+    
+    .sidebar-toggle {
+    color: #ffffff;
+    margin-bottom: 15px;
+    }
+    
+    @media (max-width: 991px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100vh;
+        width: 250px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+    
+    .sidebar.show {
+        left: 0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001;
+    }
+    }
+    
+    @media (min-width: 992px) {
+    .sidebar-toggle {
+        display: none;
+    }
+    }
+    
+    @media (max-width: 767px) {
+    .appointment-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .appointment-item button {
+        margin-top: 10px;
+    }
+    }

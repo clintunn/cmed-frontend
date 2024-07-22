@@ -45,9 +45,9 @@ function App() {//This is the function that contains the react app
           }
           />
         </Routes>
-          <Routes>
-          <Route path="/chat" element={<Chat />} />{/*Renders the Login element*/}
-          </Routes>
+          {/* <Routes> */}
+          {/* <Route path="/chat" element={<Chat />} />Renders the Login element */}
+          {/* </Routes> */}
     </BrowserRouter>
   );
 }
