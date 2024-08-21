@@ -19,16 +19,18 @@ function useDashboardData() {
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     try {
-      const [profileRes, consultationRes, notificationsRes] = await Promise.all([
+      const [profileRes, consultationRes, notificationsRes, appointmentRemindersRes] = await Promise.all([
         axios.get('http://localhost:5001/api/patients/profile'),
         axios.get('http://localhost:5001/api/patients/last-consultation'),
-        axios.get('http://localhost:5001/api/patients/notifications')
+        axios.get('http://localhost:5001/api/patients/notifications'),
+        // axios.get('http://192.168.99.196:5001/api/notifications/appointment-reminders')
       ]);
 
       setData({
         profile: profileRes.data,
         lastConsultation: consultationRes.data,
         notifications: notificationsRes.data,
+        // appointmentReminders: appointmentRemindersRes.data
       });
       setError(null);
     } catch (error) {
@@ -79,6 +81,44 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
+      <Navbar bg="dark" variant="dark" expand="lg" className="mb-3">
+        <Navbar.Brand href="#home">CampusMed</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <LinkContainer to='/'>
+              <Nav.Link>Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/dashboard'>
+              <Nav.Link>Dashboard</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/complaint'>
+              <Nav.Link>Patient-Complaint</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/PatHistory-page'>
+              <Nav.Link>History page</Nav.Link>
+            </LinkContainer>
+            {/* <LinkContainer to='/create-patient'>
+              <Nav.Link>Create Patient</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/AIchat'>
+              <Nav.Link>AI Chat</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/History-page'>
+              <Nav.Link>History</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/patient-search'>
+              <Nav.Link>Patient search</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/consultation-new'>
+              <Nav.Link>Consultation - new</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/consultation-follow-up'>
+              <Nav.Link>Consultation - follow up</Nav.Link>
+            </LinkContainer> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
       <Container fluid>
         {error && <Alert variant="danger">{error}</Alert>}
         <Button variant="dark" onClick={refreshData} className="mb-3">Refresh Data</Button>
@@ -102,12 +142,12 @@ function Dashboard() {
             <h2 className="welcome-title">Welcome to CampusMed, {data.profile.name}</h2>
             <Row>
               <Col md={12} lg={4}>
-                <Card id="profile" className="dashboard-card profile-card">
+                <Card className="dashboard-card profile-card">
                   <Card.Body>
                     <Card.Title><FaUser /> User Profile</Card.Title>
                     <Card.Text className="profile-info">
                       <p><strong>Name:</strong> {data.profile.name}</p>
-                      <p><strong>Email:</strong> {data.profile.email}</p>
+                      <p><strong>Clinic ID:</strong> {data.profile.clinicId}</p>
                       <p><strong>Age:</strong> {data.profile.age}</p>
                       <p><strong>Gender:</strong> {data.profile.gender}</p>
                     </Card.Text>
@@ -122,7 +162,11 @@ function Dashboard() {
                       <p><strong>Date:</strong> {new Date(data.lastConsultation.date).toLocaleDateString()}</p>
                       <p><strong>Diagnosis:</strong> {data.lastConsultation.diagnosis}</p>
                       <p><strong>Treatment:</strong> {data.lastConsultation.treatment}</p>
-                      <p><strong>Medication:</strong> {data.lastConsultation.medication}</p>
+                      <p><strong>Medications:</strong> {
+                      data.lastConsultation.medicationPrescriptions && data.lastConsultation.medicationPrescriptions.length > 0
+                        ? data.lastConsultation.medicationPrescriptions.map(prescription => prescription.medication).join(', ')
+                        : 'No medications prescribed'
+                    }</p>
                       <p><strong>Instructions:</strong> {data.lastConsultation.instructions}</p>
                     </Card.Text>
                   </Card.Body>

@@ -1,29 +1,100 @@
-.form_inc{
-    margin-top: 40px;
+/* General styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
 .txt1 {
     text-align: center;
-    margin-top: 70px; /* Adjust as needed */
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .txt1 h2 {
-    font-size: 24px; /* Adjust as needed */
-    color: #333; /* Adjust color as needed */
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.animated-text {
+    color: #7f8c8d;
+    font-weight: bold;
 }
 
 .txt1 h4 {
-    font-size: 18px; /* Adjust as needed */
-    color: #666; /* Adjust color as needed */
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* Form styles */
+.form_inc {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+}
 
+.form-label {
+    font-weight: bold;
+    color: #34495e;
+}
 
-/* .login_bg {
-    background-image: url('../Assets/login1.jpg');
-    height: 92vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-} */
+.form-control {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-text {
+    color: #95a5a6;
+}
+
+.btn-dark {
+    background-color: #2c3e50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #34495e;
+}
+
+.text-danger {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .txt1 h2 {
+        font-size: 28px;
+    }
+
+    .txt1 h4 {
+        font-size: 16px;
+    }
+
+    .form_inc {
+        padding: 20px;
+    }
+}

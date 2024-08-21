@@ -92,7 +92,7 @@ return (
                     Healthcare made just for you !!
                     </h4>
                     <h4>
-                    Experience seamless delivery of healthcare services in your school community.
+                    Experience seamless delivery of healthcare services.
                     </h4>
                 </div>
                 </div>
@@ -107,7 +107,7 @@ return (
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} value={email} />
                         <Form.Text className="text-muted">
-                            Login with your school email address.
+                            Login with your email address.
                         </Form.Text>
                     </Form.Group>
 

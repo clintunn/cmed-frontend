@@ -172,6 +172,58 @@
         transform: scale(1.1) rotate(10deg);
     }
     
+    /* Research Paper Section */
+    .research-paper-section {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+      }
+      
+      .research-paper-section h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      
+      .research-paper-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+      
+      .research-paper-section ul {
+        margin-bottom: 2rem;
+      }
+      
+      .research-paper-section li {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+      
+      .research-paper-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      
+      .research-icon {
+        font-size: 12rem;
+        color: #333;
+        transition: transform 0.5s ease;
+      }
+      
+      .research-paper-section:hover .research-icon {
+        transform: scale(1.1) rotate(5deg);
+      }
+      
+      @media (max-width: 768px) {
+        .research-icon {
+          font-size: 8rem;
+        }
+      }
+    
     /* Testimonial section */
     .testimonial-section {
         background-color: #f9f9f9;
@@ -214,6 +266,68 @@
     .testimonial-card .card-subtitle {
         font-size: 0.9rem;
     }
+    
+    /* Demo Section */
+    .demo-section {
+        background-color: #9da0a1;
+        padding: 80px 0;
+      }
+      
+      .carousel {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      
+      .carousel-caption {
+        background-color: rgba(248, 246, 246, 0.7);
+        padding: 20px;
+        border-radius: 8px;
+      }
+      
+      .carousel-caption h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+      
+      .demo-section h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      
+      .demo-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+      
+      .demo-section ul {
+        margin-bottom: 2rem;
+      }
+      
+      .demo-section li {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+      
+      @media (max-width: 991px) {
+        .carousel {
+          margin-bottom: 2rem;
+        }
+      }
     
     /* Footer */
     .footer {

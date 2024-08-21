@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navigation from "./Component/Navigation";
@@ -8,6 +8,8 @@ import Chat from './pages/Chat';
 import Login from './pages/Login';
 import NoNavbarPage from './Component/noNavigation';
 import Home from './pages/Home';
+import Complaint from './pages/Complaint';
+import PatHistoryPage from './pages/PatHistoryPage';
 
 
 function App() {//This is the function that contains the react app
@@ -29,7 +31,6 @@ function App() {//This is the function that contains the react app
           path="/dashboard"
           element={
             <>
-              <Navigation navItems={['Dashboard', 'Chat']} />
               <Dashboard />
             </>
           }
@@ -39,15 +40,28 @@ function App() {//This is the function that contains the react app
           path="/login" 
           element={
             <>
-              <EmpNavigation navItems={['Home']} />
+              <NoNavbarPage navItems={['Dashboard', 'Chat', 'Login']} />
               <Login />
             </>
           }
           />
+          <Route
+          path="/complaint"
+          element={
+            <>
+              <Complaint />
+            </>
+          }
+        />
+        <Route 
+          path="/PatHistory-page" 
+          element={
+            <>
+              <PatHistoryPage />
+            </>
+          }
+          />
         </Routes>
-          {/* <Routes> */}
-          {/* <Route path="/chat" element={<Chat />} />Renders the Login element */}
-          {/* </Routes> */}
     </BrowserRouter>
   );
 }
